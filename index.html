@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Agrega el enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('img/pokemon97-1983202244.jpg');
+
+            background-size: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Pokedex</h1>
+    <div class="container pokedex">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="search">
+                    <div class="input-group">
+                        <input type="text" id="pokemonName" class="form-control" placeholder="Buscar Pokémon">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" onclick="searchPokemon()">Buscar</button>
+                            <button class="btn btn-secondary" onclick="clearPokemonDetails()">Borrar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-details" id="pokemonDetails">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title" id="pokemonNameDetail"></h2>
+                            <img src="" alt="Pokemon" id="pokemonImage" class="img-fluid">
+                            <p id="pokemonHeight"></p>
+                            <p id="pokemonWeight"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <!-- Puedes agregar más elementos visuales aquí, como un panel de lista de Pokémon -->
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Listado de Pokémon</h4>
+                        <ul class="list-group" id="pokemonList">
+                            <!-- La lista de Pokémon se mostrará aquí -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agrega los scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
