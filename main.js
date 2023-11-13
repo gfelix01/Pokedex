@@ -33,7 +33,6 @@ async function searchPokemon() {
         alert('Pokémon no encontrado. Intenta de nuevo.');
     }
 }
-
 async function loadPokemonList() {
     const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=30';
 
@@ -50,9 +49,8 @@ async function loadPokemonList() {
             const pokemon = pokemonArray[index];
             const listItem = document.createElement('li');
             listItem.textContent = `${index + 1}. ${pokemon.name}`;
-            listItem.addEventListener('click', () => {
-                searchPokemon(pokemon.name);
-            });
+            
+          
 
             pokemonList.appendChild(listItem);
         }
@@ -60,8 +58,10 @@ async function loadPokemonList() {
         console.log(error);
     }
 }
-
+/*llamamos la funcion nuevamente para cargar la lista */
 loadPokemonList();
+
+/*Esta funcion borra el elemento seleccionado*/
 function clearPokemonDetails() {
     const pokemonDetails = document.getElementById('pokemonDetails');
     const pokemonNameDetail = document.getElementById('pokemonNameDetail');
